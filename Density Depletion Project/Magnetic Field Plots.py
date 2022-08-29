@@ -51,7 +51,7 @@ def plot_magData_scatter(magData, dataPath):
     fig.savefig("test.png")
 
 
-path = 'C:/Users/dehug/PycharmProjects/Mars-Research/Density Depletion Project/best_depletions.xlsx'
+path = 'best_depletions.xlsx'
 
 magField, magFieldR, magFieldV, magFieldLog, magLocs = MagData_Morsch()
 

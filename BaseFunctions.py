@@ -17,7 +17,7 @@ def MagData_Morsch():
     magFieldLog = []
     magLocs = []
 
-    magPath = 'C:/Users/dehug/PycharmProjects/Mars-Research/MORSCH_B_FIELDS_CONTOUR_BR_BH.txt'
+    magPath = 'MORSCH_B_FIELDS_CONTOUR_BR_BH.txt'
 
     with open(magPath, 'r') as mag:
         for line in mag:
