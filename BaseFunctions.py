@@ -10,14 +10,16 @@ import statistics
 import datetime
 
 
-def MagData_Morsch(file):
+def MagData_Morsch():
     magField = []
     magFieldR = []
     magFieldV = []
     magFieldLog = []
     magLocs = []
 
-    with open(file, 'r') as mag:
+    magPath = 'C:/Users/dehug/PycharmProjects/Mars-Research/MORSCH_B_FIELDS_CONTOUR_BR_BH.txt'
+
+    with open(magPath, 'r') as mag:
         for line in mag:
             mag = float(line.split()[2])
             magR = float(line.split()[3])
@@ -34,7 +36,7 @@ def MagData_Morsch(file):
             magFieldV.append(magV)
             magFieldLog.append(magLog)
 
-            return magField, magFieldR, magFieldV, magFieldLog, magLocs
+    return magField, magFieldR, magFieldV, magFieldLog, magLocs
 
 
 def columnData(path, shName, col):
@@ -50,5 +52,4 @@ def columnData(path, shName, col):
     dataList = [data for data in dataList if data is not None]
     return dataList
 
-def test():
-    print("valid")
+
