@@ -81,6 +81,14 @@ path = 'best_depletions.xlsx'
 
 magField, magFieldR, magFieldV, magFieldLog, magLocs = MagData_Morsch()
 
-magChoice = eval(input("Magnetic Field Data Choice: Choose 'magField', 'magFieldR', 'magFieldV', or 'magFieldLog' "))
+active = 'yes'
 
-plot_magData_individual(magChoice, path)
+while active == 'yes':
+
+    magChoice = eval(input("Magnetic Field Data Choice: Choose 'magField', 'magFieldR', 'magFieldV', or 'magFieldLog' "))
+
+    plot_magData_individual(magChoice, path)
+
+    active = input("Plot another orbit? Choose 'yes' or 'no': ")
+    if active == 'no':
+        print("Program stopped")

@@ -48,7 +48,6 @@ def columnData(path, shName, col):
     for cell in sheet[col]:
         if n > (headerRows - 1):
             dataList.insert(n, cell.value)
-            print(cell.value)
         n += 1
     dataList = [data for data in dataList if data is not None]
     return dataList
