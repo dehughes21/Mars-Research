@@ -55,4 +55,6 @@ path = 'best_depletions.xlsx'
 
 magField, magFieldR, magFieldV, magFieldLog, magLocs = MagData_Morsch()
 
-plot_magData_scatter(magFieldV, path)
+magChoice = eval(input("Magnetic Field Data Choice: Choose 'magField', 'magFieldR', 'magFieldV', or 'magFieldLog' "))
+
+plot_magData_scatter(magChoice, path)
