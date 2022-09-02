@@ -92,9 +92,12 @@ def columnData_sortAltLim(path, shName, col):
                 alt = sheet.cell(row=n, column=10)
             elif col in "OPQRST":
                 alt = sheet.cell(row=n, column=16)
-
-            if (alt >= altMin) and (alt <= altMax):
-                dataList.append(cell.value)
+            try:
+                if (alt >= altMin) and (alt <= altMax):
+                    dataList.append(cell.value)
+            except UnboundLocalError:
+                print("Pick a valid column")
+                break
         n += 1
     dataList = [data for data in dataList if data is not None]
     return dataList
