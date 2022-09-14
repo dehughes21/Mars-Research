@@ -92,3 +92,5 @@ while active == 'yes':
     active = input("Plot another orbit? Choose 'yes' or 'no': ")
     if active == 'no':
         print("Program stopped")
+
+

@@ -41,7 +41,7 @@ def MagData_Morsch():
 
 def columnData(path, shName, col):
     headerRows = int(input("How many rows is the header for column " + col + "? (input 0 if no header) "))
-    workbook = load_workbook(filename=path)
+    workbook = load_workbook(filename=path, data_only = True)
     sheet = workbook[shName]
     dataList = []
     n = 0

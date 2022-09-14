@@ -48,7 +48,7 @@ def plot_magData_scatter(magData, dataPath):
     ax.set_title(title)
     ax.set_xlim([0, 359])
     ax.scatter(Elongs, lats, c='r', marker='o', edgecolor='#000000', zorder=1, label='Depletions')
-    fig.savefig(title+ ".pdf", dpi = 2000)
+    fig.savefig(title+ ".pdf")
 
 
 path = 'best_depletions.xlsx'
