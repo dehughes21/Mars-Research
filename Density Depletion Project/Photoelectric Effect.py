@@ -21,7 +21,7 @@ def photoPlot(dataPath):
     x = np.linspace(5, 8.5, 100)
     y = 0.4186 * x - 1.8182
 
-    ax.set_xlabel("Frequency (X 10^14 Hz)")
+    ax.set_xlabel("Frequency (10^14 Hz)")
     ax.set_ylabel("Stopping Potential (V)")
     ax.set_title(title)
     ax.plot(x, y)
@@ -29,7 +29,7 @@ def photoPlot(dataPath):
     plt.savefig(title + ".pdf")
 
 
-# photoPlot(path)
+photoPlot(path)
 
 
 def constW(dataPath):
@@ -59,7 +59,7 @@ def constW(dataPath):
     plt.savefig(title + ".pdf")
 
 
-constW(path)
+
 
 
 def constI(dataPath):
@@ -90,4 +90,4 @@ def constI(dataPath):
     plt.savefig(title + ".pdf")
 
 
-constI(path)
+
