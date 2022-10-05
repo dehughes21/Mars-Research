@@ -21,7 +21,7 @@ def photoPlot(dataPath):
     x = np.linspace(5, 8.5, 100)
     y = 0.4186 * x - 1.8182
 
-    ax.set_xlabel("Frequency (10^14 Hz)")
+    ax.set_xlabel("Frequency ($10^{14}$ Hz)")
     ax.set_ylabel("Stopping Potential (V)")
     ax.set_title(title)
     ax.plot(x, y)
@@ -29,7 +29,7 @@ def photoPlot(dataPath):
     plt.savefig(title + ".pdf")
 
 
-photoPlot(path)
+#photoPlot(path)
 
 
 def constW(dataPath):
@@ -48,18 +48,16 @@ def constW(dataPath):
     fig.set_figheight(height)
     fig.set_figwidth(width)
 
-    ax.set_xlabel("Stopping Potential (V)")
+    ax.set_xlabel("Voltage (V)")
     ax.set_ylabel("Current (A)")
     ax.set_title(title)
-    ax.plot(v1, c1)
-    ax.plot(v2, c2)
-    ax.plot(v3, c3)
+    ax.plot(v1, c1, label='2 mm')
+    ax.plot(v2, c2, label='4 mm')
+    ax.plot(v3, c3, label='8 mm')
+    ax.legend()
     start, end = ax.get_xlim()
     ax.xaxis.set_ticks(np.arange(start, end, 2))
     plt.savefig(title + ".pdf")
-
-
-
 
 
 def constI(dataPath):
@@ -78,16 +76,17 @@ def constI(dataPath):
     fig.set_figheight(height)
     fig.set_figwidth(width)
 
-    ax.set_xlabel("Stopping Potential (V)")
+    ax.set_xlabel("Voltage (V)")
     ax.set_ylabel("Current (A)")
     ax.set_title(title)
-    ax.plot(v1, c1)
-    ax.plot(v2, c2)
-    ax.plot(v3, c3)
+    ax.plot(v1, c1, label='436 nm')
+    ax.plot(v2, c2, label='546 nm')
+    ax.plot(v3, c3, label='577 nm')
+    ax.legend()
     plt.xticks(np.arange(-5, 40, 5))
     plt.yticks(np.arange(0, 700, 100))
 
     plt.savefig(title + ".pdf")
 
 
-
+constI(path)
