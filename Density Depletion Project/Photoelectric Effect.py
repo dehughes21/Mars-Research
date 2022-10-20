@@ -59,6 +59,7 @@ def constW(dataPath):
     ax.xaxis.set_ticks(np.arange(start, end, 2))
     plt.savefig(title + ".pdf")
 
+constW(path)
 
 def constI(dataPath):
     title = input("Plot Title: ")
@@ -89,4 +90,3 @@ def constI(dataPath):
     plt.savefig(title + ".pdf")
 
 
-constI(path)
