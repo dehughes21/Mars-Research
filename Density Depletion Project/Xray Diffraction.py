@@ -27,7 +27,7 @@ def lambdaVintensity(dataPath):
     ax.set_xlabel("Wavelength, nm")
     ax.set_ylabel("Counting Rate, cps")
     ax.plot(wavelengths, intensity)
-    # plt.savefig("diffrac" + ".pdf")
+    plt.savefig("diffrac" + ".pdf")
     data = []
     for i in range(len(wavelengths)):
         data.append((wavelengths[i], intensity[i]))
