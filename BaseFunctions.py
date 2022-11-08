@@ -10,6 +10,28 @@ import statistics
 import datetime
 
 
+def autoplotDataCain():
+    fileName = input("Enter file name: ")
+    time = []
+    B_radial = []
+    B_theta = []
+    B_phi = []
+    B_mag = []
+
+    with open(fileName, 'r') as data:
+        next(data)
+        next(data)
+        next(data)
+        for line in data:
+            line = line.split(',')
+            time.append(line[0].strip())
+            B_radial.append(float(line[1].strip()))
+            B_phi.append(float(line[2].strip()))
+            B_theta.append(float(line[3].strip()))
+            B_mag.append(float(line[4].strip()))
+    return time, B_radial, B_phi, B_theta, B_mag
+
+
 def MagData_Morsch():
     magField = []
     magFieldR = []
@@ -41,7 +63,7 @@ def MagData_Morsch():
 
 def columnData(path, shName, col):
     headerRows = int(input("How many rows is the header for column " + col + "? (input 0 if no header) "))
-    workbook = load_workbook(filename=path, data_only = True)
+    workbook = load_workbook(filename=path, data_only=True)
     sheet = workbook[shName]
     dataList = []
     n = 0
